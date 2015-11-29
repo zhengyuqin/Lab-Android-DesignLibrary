@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.inthecheesefactory.lab.designlibrary.SearchViewLayout
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		android:id = "@+id/search_expanded_root"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:background = "@drawable/bg_find_header"
+		android:visibility = "gone" >
+
+	<RelativeLayout
+			xmlns:android = "http://schemas.android.com/apk/res/android"
+			android:layout_width = "match_parent"
+			android:layout_height = "wrap_content"
+			android:layout_marginLeft = "10dp"
+			android:layout_marginRight = "10dp"
+			android:layout_marginTop = "5dp"
+			android:layout_marginBottom = "5dp"
+			>
+		<RelativeLayout android:layout_width = "match_parent"
+		                android:layout_height = "wrap_content"
+		                android:id = "@+id/search_expanded_box"
+		                android:background = "@drawable/selector_search_fake_bar"
+		                android:layout_centerVertical = "true"
+		                android:layout_alignParentLeft = "true"
+		                android:layout_toLeftOf = "@+id/search_expanded_txt_cancel"
+		                android:layout_marginRight = "15dp" >
+			<ImageView
+					android:id = "@+id/search_expanded_search_img"
+					android:layout_width = "wrap_content"
+					android:layout_height = "wrap_content"
+					android:layout_marginLeft = "11dp"
+					android:src = "@drawable/ic_search"
+					android:layout_alignParentLeft = "true"
+					android:layout_centerVertical = "true" />
+			<EditText
+					android:layout_toRightOf = "@+id/search_expanded_search_img"
+					android:id = "@+id/search_expanded_edit_text"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:textSize = "16sp"
+					android:paddingTop = "6dp"
+					android:paddingBottom = "6dp"
+					android:textColor = "@color/searchbox_text_color"
+					android:textColorHint = "@color/searchbox_hint_text_color"
+					android:hint = "搜索"
+					android:background = "@null"
+					android:inputType = "textFilter"
+					android:singleLine = "true"
+					android:imeOptions = "actionSearch"
+					android:layout_toLeftOf = "@+id/search_expanded_img_cancel"
+					android:layout_centerVertical = "true" />
+			<ImageView
+					android:id = "@+id/search_expanded_img_cancel"
+					android:layout_height = "wrap_content"
+					android:layout_width = "wrap_content"
+					android:src = "@drawable/ic_search"
+					android:background = "?attr/selectableItemBackgroundBorderless"
+					android:importantForAccessibility = "no"
+					android:tint = "@color/searchbox_icon_tint"
+					android:visibility = "invisible"
+					android:layout_alignParentRight = "true"
+					android:layout_centerVertical = "true"
+					android:layout_marginRight = "5dp" />
+		</RelativeLayout >
+		<TextView android:layout_width = "wrap_content"
+		          android:layout_height = "wrap_content"
+		          android:layout_centerVertical = "true"
+		          android:layout_alignParentRight = "true"
+		          android:layout_marginRight = "5dp"
+		          android:id = "@+id/search_expanded_txt_cancel"
+		          android:textColor = "@android:color/white"
+		          android:text = "取消"
+		          android:textSize = "14sp"
+		          android:background = "?android:selectableItemBackground"
+				/>
+	</RelativeLayout >
+</com.inthecheesefactory.lab.designlibrary.SearchViewLayout >

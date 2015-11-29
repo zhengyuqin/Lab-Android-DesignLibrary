@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.inthecheesefactory.lab.designlibrary.ScrollableLayout
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		android:id = "@+id/sl_fragment_detail"
+		android:layout_width = "match_parent"
+		android:layout_height = "match_parent"
+		android:background = "@android:color/white"
+		android:orientation = "vertical" >
+	<include layout = "@layout/scrollable_short"
+	         android:layout_width = "match_parent"
+	         android:layout_height = "wrap_content" />
+
+	<LinearLayout android:layout_width = "match_parent"
+	              android:layout_height = "wrap_content"
+	              android:paddingLeft = "11dp"
+	              android:paddingRight = "11dp"
+	              android:orientation = "vertical" >
+		<com.inthecheesefactory.lab.designlibrary.TabsLayout
+				android:id = "@+id/tl_fragment_gift_detail"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				>
+		</com.inthecheesefactory.lab.designlibrary.TabsLayout >
+	</LinearLayout >
+
+	<com.inthecheesefactory.lab.designlibrary.NonScrollViewPager
+			android:id = "@+id/vp_fragment_detail_app_cooperation"
+			android:layout_width = "match_parent"
+			android:layout_height = "match_parent"
+			android:background = "@android:color/white"
+			/>
+</com.inthecheesefactory.lab.designlibrary.ScrollableLayout >

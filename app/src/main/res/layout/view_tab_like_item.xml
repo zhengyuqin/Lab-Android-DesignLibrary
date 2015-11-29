@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_gravity = "right"
+        android:layout_marginRight = "11dp"
+        android:singleLine = "true"
+        android:textAllCaps = "true"
+        android:layout_marginTop = "11dp"
+        android:layout_marginBottom = "11dp"
+        android:text = "赞"
+        android:drawablePadding="10dp"
+        />

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                android:orientation = "vertical"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:gravity = "center" >
+
+	<TextView
+			android:id = "@+id/text_find_need"
+			android:layout_width = "wrap_content"
+			android:layout_height = "wrap_content"
+			android:text = "找礼包"
+			android:textSize = "16dp"
+			android:paddingLeft = "9dp"
+			android:paddingRight = "11dp"
+			android:paddingTop = "9dp"
+			android:paddingBottom = "9dp" />
+	<TextView
+			android:id = "@+id/text_find_asked"
+			android:layout_width = "wrap_content"
+			android:layout_height = "wrap_content"
+			android:text = "发力暴"
+			android:textSize = "16dp"
+			android:layout_toRightOf = "@+id/text_find_need"
+			android:textColor = "@android:color/white"
+			android:paddingLeft = "11dp"
+			android:paddingRight = "9dp"
+			android:paddingTop = "9dp"
+			android:paddingBottom = "9dp" />
+</RelativeLayout >

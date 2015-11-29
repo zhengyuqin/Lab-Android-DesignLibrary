@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/ctv_tab_transmit"
+        android:singleLine = "true"
+        android:textAllCaps = "true"
+        android:layout_marginTop = "11dp"
+        android:layout_marginBottom = "11dp"
+        android:layout_marginLeft = "11dp"
+        android:gravity = "left"
+        android:text = "转发"
+        />
