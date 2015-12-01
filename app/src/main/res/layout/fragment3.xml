@@ -1,16 +1,9 @@
-<android.support.v4.widget.NestedScrollView
-		xmlns:android = "http://schemas.android.com/apk/res/android"
-		android:layout_width = "match_parent"
-		android:layout_height = "match_parent"
-		android:fillViewport = "true"
-		android:layout_gravity = "fill_vertical" >
 
 	<LinearLayout
+			xmlns:android = "http://schemas.android.com/apk/res/android"
 			android:layout_width = "match_parent"
 			android:layout_height = "match_parent"
 			android:orientation = "vertical" >
-		<include layout = "@layout/long_content" />
+		<include layout = "@layout/scrollable_short" />
 
 	</LinearLayout >
-
-</android.support.v4.widget.NestedScrollView >

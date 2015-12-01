@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		android:orientation = "vertical"
+		android:layout_width = "match_parent"
+		android:layout_height = "match_parent"
+		>
+	<LinearLayout android:layout_width = "match_parent" android:layout_height = "wrap_content"
+	              android:orientation = "vertical" >
+		<com.inthecheesefactory.lab.designlibrary.SearchViewFakeLayout
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:id = "@+id/search_view_container"
+				android:clipToPadding = "false"
+				android:clipChildren = "false" >
+			<LinearLayout
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:id = "@+id/ly_search_collapse"
+					android:background = "@drawable/bg_find_header" >
+				<LinearLayout android:layout_width = "match_parent"
+				              android:layout_height = "wrap_content"
+				              android:layout_marginLeft = "10dp"
+				              android:layout_marginRight = "10dp"
+				              android:layout_marginTop = "5dp"
+				              android:layout_marginBottom = "5dp"
+				              android:background = "@drawable/selector_search_fake_bar"
+				              android:gravity = "center"
+				              android:id = "@+id/ly_search_collapse_box" >
+					<TextView android:layout_width = "wrap_content"
+					          android:layout_height = "wrap_content"
+					          android:text = "搜索"
+					          android:textColor = "@android:color/white"
+					          android:textSize = "16dp"
+					          android:id = "@+id/tv_search_collapse_box"
+					          android:gravity = "center"
+					          android:paddingTop = "6dp"
+					          android:paddingBottom = "6dp"
+					          android:drawableLeft = "@drawable/ic_search"
+							/>
+				</LinearLayout >
+			</LinearLayout >
+		</com.inthecheesefactory.lab.designlibrary.SearchViewFakeLayout >
+
+
+		<include layout = "@layout/scrollable_short" />
+	</LinearLayout >
+</android.support.v4.widget.NestedScrollView >

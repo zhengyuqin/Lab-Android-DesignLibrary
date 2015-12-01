@@ -11,7 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AnimationCallback{
 
 	Toolbar toolbar;
 	CollapsingToolbarLayout collapsingToolbarLayout;
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 	CoordinatorLayout rootLayout;
 	private View headerView;
+	private Toolbar mToolbar;
 
 	private SearchViewLayout mSearchViewLayout;
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		headerView = findViewById(R.id.header);
 		mSearchViewLayout = (SearchViewLayout) findViewById(R.id.search_expanded_root);
+
 		initToolbar();
 		initInstances();
 
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
 	private void initToolbar() {
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
+		toolbar.setTitle("勿忘心安");
 		setSupportActionBar(toolbar);
 	}
 
@@ -52,8 +55,10 @@ public class MainActivity extends AppCompatActivity {
 		rootLayout = (CoordinatorLayout) findViewById(R.id.rootLayout);
 
 
-		collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbarLayout);
-		collapsingToolbarLayout.setTitle("Design Library");
+//		collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbarLayout);
+//		collapsingToolbarLayout.setTitle("Design Library");
+
+		//toolbar.setTitle("勿忘心安");
 	}
 
 	@Override
@@ -98,5 +103,56 @@ public class MainActivity extends AppCompatActivity {
 		} else {
 			mSearchViewLayout.setVisibility(View.GONE);
 		}
+	}
+
+	public Toolbar getToolbar() {
+		return toolbar;
+	}
+
+	public SearchViewLayout getSearchViewLayout() {
+		return mSearchViewLayout;
+	}
+
+	@Override
+	public void onAnimationEnd(boolean expand) {
+		if (expand) {
+			pushFragmentToActivityFragmentManager(new Fragment_Search_Result());
+		}
+	}
+
+	@Override
+	public void onAnimationStart(boolean expand) {
+		if (!expand) {
+			popFragmentFromActivityFragmentManager();
+		}
+	}
+
+	@Override
+	public void onAnimationCancel(boolean expand) {
+
+	}
+
+	public boolean popFragmentFromActivityFragmentManager() {
+		if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+
+			Fragment curFragment = getTopFragment();
+
+			/**
+			 * 这里用popBackStack()退出之后getBackStackEntryCount还是原来的数量,topFragment还是之前那个fragment,
+			 * 要用popBackStackImmediate();
+			 */
+			getSupportFragmentManager().popBackStackImmediate();
+			getSupportFragmentManager().executePendingTransactions();
+			return true;
+		}
+		return false;
+	}
+
+	public Fragment getTopFragment() {
+		if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+			Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.detail);
+			return fragment;
+		}
+		return getSupportFragmentManager().findFragmentById(R.id.container);
 	}
 }

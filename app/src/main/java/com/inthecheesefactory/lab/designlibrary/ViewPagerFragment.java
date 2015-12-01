@@ -28,7 +28,7 @@ public class ViewPagerFragment extends Fragment {
 		}
 		childFragments = new ArrayList<>();
 		childFragments.add(new Fragment1());
-		childFragments.add(new Fragment2());
+		childFragments.add(new ChildViewPagerFragment());
 		childFragments.add(new FragmentDetail());
 		mMyPagerAdapter = new MyPagerAdapter(getChildFragmentManager(), childFragments);
 	}

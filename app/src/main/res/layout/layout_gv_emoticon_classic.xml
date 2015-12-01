@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:layout_width = "match_parent"
+              android:layout_height = "match_parent"
+              android:orientation = "vertical"
+              android:id = "@+id/layout_content" >
+
+    <GridView
+            android:id = "@+id/gv_essay_detail_emoticon"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:fadingEdgeLength = "20dp"
+            android:gravity = "center_horizontal"
+            android:numColumns = "7"
+            android:overScrollMode = "never"
+            android:paddingBottom = "20dp"
+            android:paddingLeft = "15dp"
+            android:paddingRight = "15dp"
+            android:paddingTop = "10dp"
+            android:scrollbarStyle = "insideOverlay"
+            android:verticalSpacing = "5dp" />
+
+</LinearLayout >
